@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contentContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/space10">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contentImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvContactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Victor Hugo"
+                android:textStyle="bold"
+                android:textSize="@dimen/size14"
+                android:layout_marginStart="@dimen/space10"
+                app:layout_constraintStart_toEndOf="@+id/contentImage"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvContactPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="55 818549227"
+                android:textStyle="italic"
+                android:textSize="@dimen/size12"
+                android:layout_marginStart="@dimen/space10"
+                app:layout_constraintStart_toEndOf="@+id/contentImage"
+                app:layout_constraintTop_toBottomOf="@id/tvContactName"
+                app:layout_constraintBottom_toBottomOf="@id/contentImage"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvContactPhone"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</LinearLayout>

@@ -1,0 +1,208 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/space12"
+    android:paddingBottom="@dimen/space12"
+    android:paddingStart="@dimen/space30"
+    android:paddingEnd="@dimen/space30"
+    android:background="@color/bg_primary"
+    tools:context="com.example.template.views.fragments.AddContactFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_add_contact"
+        android:textSize="@dimen/size20"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_name"
+        android:layout_marginTop="@dimen/space18"
+        android:textSize="@dimen/size20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space5"
+        android:hint="@string/text_name"
+        android:background="@drawable/style_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName"/>
+
+    <TextView
+        android:id="@+id/tvLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_last_name"
+        android:layout_marginTop="@dimen/space12"
+        android:textSize="@dimen/size20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etName"/>
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space5"
+        android:hint="@string/text_last_name"
+        android:background="@drawable/style_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLastName"/>
+
+    <TextView
+        android:id="@+id/tvLastNameM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_last_name_m"
+        android:layout_marginTop="@dimen/space12"
+        android:textSize="@dimen/size20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etLastName"/>
+
+    <EditText
+        android:id="@+id/etLastNameM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space5"
+        android:hint="@string/text_last_name_m"
+        android:background="@drawable/style_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLastNameM"/>
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_age"
+        android:layout_marginTop="@dimen/space12"
+        android:textSize="@dimen/size20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etLastNameM"/>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space5"
+        android:hint="@string/text_age"
+        android:inputType="number"
+        android:layout_marginEnd="@dimen/space5"
+        android:background="@drawable/style_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@id/tvAge"/>
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_phone"
+        android:layout_marginTop="@dimen/space12"
+        android:textSize="@dimen/size20"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/space5"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@id/etLastNameM"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space5"
+        android:hint="@string/text_phone"
+        android:inputType="number"
+        android:layout_marginEnd="@dimen/space5"
+        android:background="@drawable/style_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/tvPhone"
+        app:layout_constraintTop_toBottomOf="@id/tvPhone"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_sex"
+        android:layout_marginTop="@dimen/space12"
+        android:textSize="@dimen/size20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAge"/>
+
+    <EditText
+        android:id="@+id/etSex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space5"
+        android:hint="@string/text_sex"
+        android:layout_marginEnd="@dimen/space5"
+        android:background="@drawable/style_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSex"
+        app:layout_constraintEnd_toStartOf="@+id/view"/>
+
+    <TextView
+        android:id="@+id/tvSelectPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_photo"
+        android:layout_marginTop="@dimen/space12"
+        android:textSize="@dimen/size20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvPhone"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"/>
+
+    <ImageView
+        android:id="@+id/ivSelectPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/imagen"
+        android:layout_marginTop="@dimen/space5"
+        app:layout_constraintStart_toStartOf="@+id/tvPhone"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectPhoto"
+        app:layout_constraintBottom_toBottomOf="@+id/etSex"/>
+
+    <ImageView
+        android:id="@+id/ivPreviewPhoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/space10"
+        app:layout_constraintStart_toEndOf="@id/tvSelectPhoto"
+        app:layout_constraintTop_toTopOf="@+id/tvSelectPhoto"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddContactToDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space16"
+        android:text="@string/text_add_contact"
+        android:backgroundTint="@color/primary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
