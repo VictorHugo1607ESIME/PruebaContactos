@@ -12,7 +12,7 @@ import com.example.template.models.ContactsDAO
 @Dao
 interface DBContacts {
 
-    @Query("SELECT * FROM ${Constants.TABLE_CONTACT}")
+    @Query("SELECT * FROM ${Constants.TABLE_CONTACT} ORDER BY name ASC")
     fun getListContact(): MutableList<ContactsDAO>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
